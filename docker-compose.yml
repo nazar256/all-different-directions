@@ -1,0 +1,11 @@
+version: '2.3'
+
+services:
+  php:
+    build: ./docker
+    working_dir: /app
+    environment:
+      PHP_IDE_CONFIG: serverName=php
+    volumes:
+      - ./:/app
+      - ./docker/php.ini:/usr/local/etc/php/php.ini
